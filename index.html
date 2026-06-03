@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>光学レンズシミュレーター</title>
+    <style>
+        body { margin: 0; background: #1a1a1a; color: #fff; font-family: sans-serif; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; }
+        canvas { background: #111; border: 1px solid #444; box-shadow: 0 4px 20px rgba(0,0,0,0.5); cursor: move; }
+        #controls { margin-top: 15px; display: flex; gap: 20px; align-items: center; }
+        label { font-size: 14px; }
+    </style>
+</head>
+<body>
+
+    <h2>光学レンズシミュレーター (2D Ray Tracing)</h2>
+    <canvas id="simCanvas" width="800" height="500"></canvas>
+    
+    <div id="controls">
+        <label>
+            レンズの屈折率 (n): <span id="nVal">1.50</span>
+            <input type="range" id="refractiveIndex" min="1.1" max="2.0" step="0.05" value="1.50">
+        </label>
+        <span style="font-size: 12px; color: #aaa;">※レンズをマウスでドラッグして移動できます</span>
+    </div>
+
+    <script type="module" src="./main.js"></script>
+</body>
+</html>
